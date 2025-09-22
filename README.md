@@ -42,6 +42,7 @@ python3 todo.py add "Read a book"
 python3 todo.py list
 python3 todo.py remove 1
 
+
 ## Option C — Docker Compose (interactive friendly)
 ```bash
 docker-compose up -d
