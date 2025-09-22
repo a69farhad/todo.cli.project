@@ -52,5 +52,4 @@ docker-compose exec todo bash     # enter the container
 python3 todo.py list
 ```
 
-e】
-- Persist data via a Docker **volume** mapping `./data:/app/data`.【26†source】
+
