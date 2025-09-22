@@ -20,7 +20,7 @@ python3 todo.py remove 1
 docker build -t todo-cli:latest .
 ```
 
-## Option A — Pass arguments directly (uses ENTRYPOINT)【26†source】
+## Option A — Pass arguments directly (uses ENTRYPOINT)
 > Matches Task 4 (ENTRYPOINT): set up so the script accepts args via Docker.
 
 ```bash
@@ -30,7 +30,7 @@ docker run --rm -v "$(pwd)/data:/app/data" todo-cli:latest list
 docker run --rm -v "$(pwd)/data:/app/data" todo-cli:latest remove 1
 ```
 
-## Option B — **Interactive inside the container** (Updated Task 5)【26†source】
+## Option B — **Interactive inside the container** (Updated Task 5)
 > Recommended by the updated assignment: enter the container and run commands **inside**.
 
 ```bash
@@ -43,7 +43,6 @@ python3 todo.py list
 python3 todo.py remove 1
 ```
 
-> Note: We keep an ENTRYPOINT for Task 4, and simply **override it** with `--entrypoint /bin/bash` for interactive work per Updated Task 5. This satisfies both requirements.【26†source】
 
 ## Option C — Docker Compose (interactive friendly)
 ```bash
@@ -53,11 +52,5 @@ docker-compose exec todo bash     # enter the container
 python3 todo.py list
 ```
 
-## Repository tips
-- Commit your code and push to a public GitHub repo.
-- Include `README.md`, `Dockerfile`, `docker-compose.yml`, `.gitignore`, and `data/` (with an empty `tasks.json` or add it to .gitignore).
-
-## Notes from assignment
-- The same `todo.py` works **inside/outside** Docker.【26†source】
-- Avoid external Python packages (we use none).【26†source】
+e】
 - Persist data via a Docker **volume** mapping `./data:/app/data`.【26†source】
