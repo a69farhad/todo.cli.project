@@ -1,4 +1,4 @@
-# Explicitly list Python version and libraries (for educational purposes)
+
 python>=3.10
 json
 os
